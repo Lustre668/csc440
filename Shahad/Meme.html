@@ -1,0 +1,71 @@
+
+<html><head>
+	<!-- The title shows up in the browser toolbar -->
+	<title>Shahad's Homepage</title>
+       <link href="websiteStyle.css" rel="stylesheet"/>
+<style>
+	.butto {
+  background-color: gray;/* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 300px;
+  position: fixed;
+  top : 350px;
+  left: 400px;
+}
+.butt {
+  background-color: gray;/* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 300px;
+  position: fixed;
+  top : 350px;
+  left :800px;
+}
+	.button4 {border-radius: 12px;
+
+	}
+</style>
+</head>
+
+<body>
+
+  <div class="frame">
+  <div class="cover-image">
+    <div class="first-text">
+    <br>
+   <h2> Welcome to Meme page
+        <span id="result"></span> 
+        !<br> 
+        <span id="matches"></span> 
+        <script>
+        document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+      </script> 
+    <script> 
+        document.getElementById("matches").innerHTML=localStorage.getItem("percentage");
+      </script>
+         
+         </h2>
+         
+
+       </div>
+   </div> 
+   <img src="images/meme.jpg" alt=“OurMemes” width="500" height="600">   
+</div>
+</body>
+
+</html>
