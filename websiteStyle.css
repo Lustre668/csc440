@@ -2,7 +2,7 @@
 		/* body tag selector: define a default font. Never use Comic Sans. */
 
     body {
-    background-image: url("Background.jpeg");
+    background-image: url("shahad/Background.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
 text-align:center;
