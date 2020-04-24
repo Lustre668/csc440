@@ -1,0 +1,205 @@
+
+<html><head>
+	<!-- The title shows up in the browser toolbar -->
+	<title>Shahad's Homepage</title>
+	   <link href="websiteStyle.css" rel="stylesheet"/>
+
+	   <script>
+		function UserInterest()
+		{	
+			var Cooking = 0
+			var CookingV =""
+			var Reading = 0
+			var ReadingV =""
+			var Swimming = 0
+			var SwimmingV =""
+			var Music = 0
+			var MusicV =""
+			var MatchPercentage = 0 
+			var match = 0 
+
+				if(document.getElementById("Cooking").checked){
+				  Cooking = 30
+				  CookingV = document.getElementById("Cooking").value
+
+				}
+	
+				if(document.getElementById("Swimming").checked){
+					Swimming = 40
+					SwimmingV = document.getElementById("Swimming").value
+
+				}
+				if(document.getElementById("Music").checked){
+					Music = 30
+					MusicV = document.getElementById("Music").value
+				}
+				
+				
+				 match = Cooking +Swimming+ Music
+				 if(match==0){				 
+				  MatchPercentage = "Our interests Match 0%"}
+ 
+				 else{
+				  MatchPercentage = "Our interests Match "+  match + "% In " + (CookingV +" " )+ (ReadingV +" " )+ (SwimmingV +"  " ) + MusicV
+				  }
+				  if (document.getElementById("MyCv").checked ){
+
+					localStorage.setItem("percentage", MatchPercentage);
+                    window.location.href = "Interest.html"
+			}
+			else{
+		    	localStorage.setItem("percentage", MatchPercentage);
+				window.location.href = "Meme.html"
+			}
+
+		}
+		function setValues() {
+			var fullname= document.getElementById("fname").value;
+			localStorage.setItem("textvalue", fullname);
+			return false;
+		}
+		
+
+</script>
+<style>
+
+
+	.gender{
+		position: absolute;
+		top: 300px;
+		left: 550px;
+	}
+	.format {
+		position: absolute;
+		top: 200px;
+		left: 550px;
+	}
+	.format2 {
+		position: absolute;
+		top: 250px;
+		left: 530px;
+	}
+	.female{
+		position: absolute;
+		top: 300px;
+		left: 670px;
+	color:#EAAFA5	}
+	.male{
+		position: absolute;
+		top: 300px;
+		left: 800px;
+	color:#EAAFA5	}
+	
+	.colorsInterest{
+		position: absolute;
+		top: 390px;
+		left: 670px;
+		color:#EAAFA5;}
+	.CV{
+
+		position: absolute;
+		top: 680px;
+		left: 670px;
+	color:#EAAFA5	}
+	.Meme{
+		position: absolute;
+		top: 630px;
+		left: 670px;
+	color:#EAAFA5	}
+	
+	.FM{
+		position: absolute;
+		padding: 10px;
+		top: 300px;
+		left: 800px;
+		color:#D6C1C2;
+	}
+	
+	.choose{
+	position: absolute;
+		top: 600px;
+		left: 620px;
+	}
+	.button {
+  border: none;
+  color: white;
+  width:100px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 8px 2px;
+  cursor: pointer;
+  position: absolute;
+		padding: 10px;
+		top: 730px;
+left: 680px;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border-radius: 8px;
+  border: 2px solid gray;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+<!--Form-->
+<div class="frame">
+<br>
+
+<h2>Welcome to my page ! </h2>
+	
+<form  method="GET" action="JavaScript:UserInterest()">
+		<p>Please fill in the following form</p>
+
+<label class = "format" >Full Name:
+		  <input type="text" id="fname" name="fname" size="40"></label><br><br>
+		  <label class = "format2">&nbsp;&nbsp;&nbsp;&nbsp;Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <input type="text" id="Email" name="Email" size="40"></label><br><br>
+          <label class = "gender"for="like">Gender:</label><br>
+		  <div class = "female">
+            <input  type="radio" id="gender" name="age" value="Fmale">
+		  <label for="age1">Female</label>
+		    </div>
+		   <div class = "male">
+	       <input type="radio" id="gender" name="age" value="Male">
+		   <label for="age2">Male</label></div>
+	<br><br>
+	 <br/>
+	 
+	 <label>&nbsp;&nbsp;What is your interests ?<br/></label>
+				
+			<div class="colorsInterest">
+				 <input id="Cooking" type="checkbox" value="Cooking">&nbsp;Cook&nbsp;&nbsp;<br><br>&nbsp;
+				 <input id="Swimming" type="checkbox"value= "Swmming">&nbsp;&nbsp;Swim&nbsp;&nbsp;<br><br>
+				 <input id="Music" type="checkbox"value= "Music">&nbsp;Music<br><br>
+				 <input id="Reading" type="checkbox"value= "Reading"> &nbsp;Read<br><br>
+			</div>
+			
+			
+			<div class="choose">
+	 <label>What do you want to see ?</label><br></div>
+				<div class="Meme">
+				<input type="radio" id="memes" name="What Would you like to see" value="memes" checked="checked"/> Memes
+				</div>
+				<div class = "CV">
+				<input type="radio" id="MyCv" name="What Would you like to see" value="CV" >  My CV
+				</div>
+				
+ <input class="button button1" type="submit" value="Submit" onclick="setValues();" /> 	
+   
+</form>
+<!--End of Form-->
+  
+	</div>
+</body>
+
+</html>
